@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: dev
+    ports:
+      - "50051:50051"
+    volumes:
+      - .:/app
+    environment:
+      - APP_ENV=development
